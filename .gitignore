@@ -1,0 +1,10 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+.DS_Store
+shared/data/raw/*
+!shared/data/raw/README.md
+shared/data/processed/*
+!shared/data/processed/README.md
