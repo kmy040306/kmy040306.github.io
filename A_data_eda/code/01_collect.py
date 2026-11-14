@@ -143,9 +143,12 @@ def drop_duplicates(c, flow):
 def stratified_sample(c):
     rng = np.random.default_rng(SEED)
     c["auto_series_key"] = c["식품명"].map(series_key)
-    c["name_has_protein"] = has(c["식품명"], PROTEIN_WORDS)
-    strata = c.groupby(["food_group", "auto_series_key"])["name_has_protein"].any().astype(int)
-    c["screen_stratum"] = [strata[(g, k)] for g, k in zip(c["food_group"], c["auto_series_key"])]
+    # 선별층: 1 = 이름에 단백질 키워드, 2 = (요거트만) 키워드 없이 그릭류, 0 = 나머지. 시리즈 안 최댓값 사용
+    # 우선순위 점수(단백질 2 > 그릭 1 > 없음 0)를 시리즈 안에서 최댓값으로 정한 뒤 층 번호로 바꾼다
+    priority = np.where(has(c["식품명"], PROTEIN_WORDS), 2,
+                        np.where((c["food_group"] == "yogurt") & has(c["식품명"], GREEK), 1, 0))
+    best = pd.Series(priority, index=c.index).groupby([c["food_group"], c["auto_series_key"]]).transform("max")
+    c["screen_stratum"] = best.map({2: 1, 1: 2, 0: 0})
     c = c.sort_values(["food_group", "auto_series_key", "식품명", "식품코드"]).reset_index(drop=True)
     c["candidate_id"] = [f"C{i:05d}" for i in range(1, len(c) + 1)]
     c["series_rank"], c["sampled"] = np.nan, 0
