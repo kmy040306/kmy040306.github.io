@@ -1,3 +1,7 @@
+#이 코드가 하는 일
+#A가 만든 시리즈 단위 데이터를 이용
+#같은 식품군 안에서 단백질 강조 제품과 일반 제품을 비교
+
 from pathlib import Path
 import runpy
 
@@ -235,3 +239,41 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+#     python - <<'PY'
+# import runpy
+# import numpy as np
+# from scipy import stats
+
+# module = runpy.run_path("B_statistics_ml/code/01_tests.py")
+
+# high = np.array([8, 10, 11, 14, 17], dtype=float)
+# regular = np.array([2, 4, 5, 6, 8, 9], dtype=float)
+
+# p, low, upper, status = module["welch_test"](high, regular)
+# expected = stats.ttest_ind(high, regular, equal_var=False)
+
+# assert status == "ok"
+# assert np.isclose(p, expected.pvalue)
+# assert low < high.mean() - regular.mean() < upper
+
+# missing = module["welch_test"](high[:1], regular)
+# assert missing[3] == "insufficient_data"
+# assert np.isnan(missing[0])
+
+# constant = module["welch_test"](np.ones(3), np.zeros(3))
+# assert constant[3] == "zero_variance"
+
+# first = module["bootstrap_interval"](
+#     high, regular, np.random.default_rng(42)
+# )
+# second = module["bootstrap_interval"](
+#     high, regular, np.random.default_rng(42)
+# )
+# assert first == second
+# assert first[0] <= first[1]
+
+# print("계산 함수 점검 통과 — 실제 데이터 분석은 아직 수행하지 않았습니다.")
+# PY
