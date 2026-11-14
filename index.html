@@ -1,25 +1,23 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>고단백 식품 분석 프로젝트</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:50px auto;padding:0 24px;line-height:1.8;color:#173042;background:#f7fafc}section{background:white;padding:20px 28px;margin:18px 0;border:1px solid #dde5ee;border-radius:12px}a{color:#1756a9}h1{line-height:1.4}</style><h1>고단백 제품은 효율적인 단백질 공급원인가?</h1><p>팀원 A: 이름 입력 · 팀원 B: 이름 입력</p><p><strong>프로젝트 준비 단계</strong> — 분석 결과가 아닌 작성용 초기 구성입니다.</p><p><a href="https://github.com/kmy040306/kmy040306.github.io">저장소와 역할별 폴더</a> · <a href="final/tutorial.ipynb">최종 노트북 템플릿</a></p><section><h2>연구 목적과 팀원</h2><p>
-팀원 A: 이름 입력 / 팀원 B: 이름 입력
-
-초기 구성입니다. 아직 분석을 수행하지 않았습니다. 단백질 강조 제품과 일반 제품의 식품군별 효율을 비교합니다.
-</p></section><section><h2>1. 연구 동기 [A]</h2><p>
-소비자의 질문과 연구 범위, 가격·흡수율을 다루지 않는 이유를 설명하세요.
-</p></section><section><h2>2. 데이터·선정 규칙 [공동]</h2><p>
-출처, 버전, 표시 판정, 시리즈 정의, 제외 기준과 표본 흐름을 작성하세요.
-</p></section><section><h2>3. 전처리와 지표 [A]</h2><p>
-단위·결측·중복 처리와 단백질 효율 계산 과정을 설명하세요.
-</p></section><section><h2>4. EDA [A]</h2><p>
-표본 수·결측률·분포·이상치를 시각화하고 해석하세요.
-</p></section><section><h2>5. 가설검정 [B]</h2><p>
-시리즈 평균에 대한 Welch 검정, Holm 보정, 평균 차이·95% 구간과 부트스트랩을 보고하세요.
-</p></section><section><h2>6. 식품군 상호작용 [B]</h2><p>
-효율 차이가 식품군마다 다른지 탐색적으로 분석하세요.
-</p></section><section><h2>7. 머신러닝 [B]</h2><p>
-당류·나트륨·포화지방으로 단백질 강조 여부를 예측합니다. 시리즈 단위 교차검증, Pipeline 표준화, 기준선과 성능 변동을 설명하세요.
-</p></section><section><h2>8. 단백질 20g 사례 비교 [A]</h2><p>
-선정된 시리즈와 조리 상태가 확인된 닭가슴살·계란·두부를 비교하세요.
-</p></section><section><h2>9. 결론·한계 [공동]</h2><p>
-검정이 유의하지 않아도 보고합니다. 인과성·건강성·시장 대표성을 주장하지 않습니다.
-</p></section><section><h2>10. 출처와 재현 방법 [공동]</h2><p>
-외부 자료 링크, 환경 버전, 데이터 확보 및 실행 순서를 기록하세요.
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>고단백 식품 분석 프로젝트</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:50px auto;padding:0 24px;line-height:1.8;color:#173042;background:#f7fafc}section{background:white;padding:20px 28px;margin:18px 0;border:1px solid #dde5ee;border-radius:12px}a{color:#1756a9}h1{line-height:1.4}</style><h1>고단백 제품은 효율적인 단백질 공급원인가?</h1><p>식품 영양성분 데이터로 살펴보는 2인 분석 프로젝트</p><p><strong>분석 준비 중</strong> — 연구를 진행하며 분석 과정과 결과를 이곳에 정리할 예정입니다.</p><p><a href="https://github.com/kmy040306/kmy040306.github.io">프로젝트 저장소</a> · <a href="final/tutorial.ipynb">분석 노트북</a></p><section><h2>프로젝트 소개</h2><p>
+바·떠먹는 요거트·유제품 기반 음료를 대상으로 단백질 강조 제품과 일반 제품을 비교합니다. 같은 열량에서 얻는 단백질의 양은 얼마나 다른지, 다른 영양성분에는 어떤 차이가 있는지 데이터로 살펴보는 프로젝트입니다.
+</p></section><section><h2>1. 연구 동기</h2><p>
+‘고단백’이라는 문구가 붙은 제품은 단백질을 섭취하는 데 얼마나 효율적일까요? 단백질 함량뿐 아니라 함께 섭취하는 열량과 당류·나트륨·포화지방까지 비교해 보려 합니다.
+</p></section><section><h2>2. 비교할 제품과 데이터</h2><p>
+공공 식품영양성분 자료를 바탕으로 같은 식품군끼리 비교합니다. 단백질 강조 여부는 포장이나 제조사 공식 설명으로 확인하고, 같은 제품 라인에서 맛만 다른 제품은 하나의 시리즈로 묶습니다.
+</p></section><section><h2>3. 단백질 효율의 기준</h2><p>
+바·요거트는 100g, 음료는 100mL로 기준을 맞춥니다. 단백질 효율은 100kcal당 단백질의 양(g)으로 계산하고, 제품별 값을 시리즈 단위로 평균 내어 비교합니다.
+</p></section><section><h2>4. 영양성분 분포 살펴보기</h2><p>
+식품군별로 단백질 효율과 주요 영양성분의 분포를 그래프로 살펴봅니다. 평균만으로는 드러나지 않는 제품 간 차이와 자료가 부족한 부분도 함께 확인합니다.
+</p></section><section><h2>5. 통계로 비교하기</h2><p>
+시리즈 평균을 바탕으로 두 집단의 차이를 Welch 검정으로 살펴보고, 여러 항목을 비교하는 데 따른 오차를 보정합니다. 차이의 크기와 95% 신뢰구간, 부트스트랩 결과를 함께 해석할 계획입니다.
+</p></section><section><h2>6. 식품군에 따른 차이</h2><p>
+단백질 강조 제품과 일반 제품의 효율 차이가 바·요거트·음료에서 비슷하게 나타나는지도 궁금합니다. 충분한 자료가 확보되면 식품군과 단백질 강조 여부의 상호작용을 추가로 살펴봅니다.
+</p></section><section><h2>7. 영양성분으로 예측하기</h2><p>
+단백질 수치 없이 당류·나트륨·포화지방만으로 단백질 강조 제품을 구분할 수 있을까요? 식품군별로 로지스틱 회귀와 결정트리를 학습하고, 시리즈 단위 교차검증으로 단순한 기준 모델보다 잘 예측하는지 확인합니다.
+</p></section><section><h2>8. 단백질 20g을 먹는다면</h2><p>
+단백질 20g을 섭취할 때 필요한 양과 함께 먹게 되는 영양성분을 비교합니다. 단백질 강조 제품과 닭가슴살·계란·두부를 사례로 살펴보되, 조리 상태와 성분이 확인되는 자료를 사용합니다.
+</p></section><section><h2>9. 결과를 읽는 범위</h2><p>
+분석을 마치면 차이가 뚜렷한 부분과 그렇지 않은 부분을 함께 정리할 예정입니다. 이 연구는 수집한 제품의 영양성분을 비교하며, 가격이나 체내 흡수율, 전반적인 건강성을 평가하지는 않습니다.
+</p></section><section><h2>10. 분석 과정과 자료</h2><p>
+데이터 출처와 제품 선정 기준, 분석 코드와 결과를 저장소와 노트북에 정리할 예정입니다. 어떤 자료로 어떻게 비교했는지 확인할 수 있도록 분석 과정을 남깁니다.
 </p></section></html>
