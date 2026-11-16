@@ -18,7 +18,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "shared/data/raw"
 RESULTS = ROOT / "shared/results"
 SEED = 42
-MAX_SERIES = 30          # 식품군 × 선별층당 최대 시리즈
+MAX_SERIES = 30          # 식품군 × 선별층당 기본 최대 시리즈
+MAX_GREEK_SERIES = 50    # 요거트 선별층 2의 보충 추출 후 최대 시리즈
 MAX_FLAVORS = 3          # 시리즈당 최대 제품(맛)
 SOURCE_ID = "MFDS_PROC"
 NUTRIENTS = ["에너지(kcal)", "단백질(g)", "당류(g)", "나트륨(mg)", "포화지방산(g)"]
@@ -153,15 +154,25 @@ def stratified_sample(c):
     c["candidate_id"] = [f"C{i:05d}" for i in range(1, len(c) + 1)]
     c["series_rank"], c["sampled"] = np.nan, 0
 
-    for (g, s), part in c.groupby(["food_group", "screen_stratum"], sort=True):
-        keys = np.array(sorted(part["auto_series_key"].unique()))
-        order = rng.permutation(len(keys))[:MAX_SERIES]
-        for rank, k in enumerate(keys[order], start=1):
-            idx = part.index[part["auto_series_key"] == k]
-            c.loc[idx, "series_rank"] = rank
-            pick = rng.permutation(len(idx))[:MAX_FLAVORS]
-            c.loc[idx[pick], "sampled"] = 1
+    strata = c.groupby(["food_group", "screen_stratum"], sort=True)
+    for _, part in strata:
+        sample_series(c, part, rng, MAX_SERIES)
+
+    # 기존 추출을 모두 끝낸 뒤 보충해 기존 표본·담당·공동 판정이 바뀌지 않게 한다.
+    remaining_greek = c[(c["food_group"] == "yogurt")
+                        & (c["screen_stratum"] == 2) & c["series_rank"].isna()]
+    sample_series(c, remaining_greek, rng, MAX_GREEK_SERIES - MAX_SERIES, start_rank=MAX_SERIES + 1)
     return c
+
+
+def sample_series(c, part, rng, limit, start_rank=1):
+    keys = np.array(sorted(part["auto_series_key"].unique()))
+    order = rng.permutation(len(keys))[:limit]
+    for rank, key in enumerate(keys[order], start=start_rank):
+        idx = part.index[part["auto_series_key"] == key]
+        c.loc[idx, "series_rank"] = rank
+        pick = rng.permutation(len(idx))[:MAX_FLAVORS]
+        c.loc[idx[pick], "sampled"] = 1
 
 
 def assign_reviewers(c):
