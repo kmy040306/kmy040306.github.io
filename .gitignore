@@ -4,7 +4,11 @@ __pycache__/
 .env
 .env.*
 .DS_Store
+# 원본 공공데이터(대용량)는 git 제외: sources.csv의 URL·해시로 재확보하거나 공동 Drive에서 받는다
 shared/data/raw/*
 !shared/data/raw/README.md
-shared/data/processed/*
-!shared/data/processed/README.md
+# 우리가 만든 작은 작업 파일은 git으로 공유
+!shared/data/raw/candidates.csv
+!shared/data/raw/review_A.csv
+!shared/data/raw/review_B.csv
+# 정제 결과(products.csv, series_*.csv, reference_foods.csv)도 작으므로 git으로 공유
