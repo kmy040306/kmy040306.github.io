@@ -1,0 +1,4 @@
+reference_id,food_name,source_id,source_food_code,source_food_name,preparation,basis_amount,basis_unit,source_year,protein_g,energy_kcal,sugar_g,sodium_mg,sat_fat_g
+R01,닭가슴살,RDA_RAW,R209-008000546-0000,닭고기_가슴(껍질 제거)_삶은것,"껍질 제거, 삶음, 무첨가",100,g,2025,28.09,127.0,0.0,40.0,0.37
+R02,달걀,RDA_RAW,R210-003000046-0000,달걀_삶은것,"전란, 삶음, 무첨가",100,g,2025,13.49,145.0,0.13,128.0,2.78
+R03,두부,MFDS_PROC,P106-001000100-0001,두부,"일반 두부, 양념·기름 무첨가 (농촌진흥청 성분표 행)",100,g,2026,9.62,97.0,0.0,1.0,0.7
