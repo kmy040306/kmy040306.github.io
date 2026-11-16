@@ -1,0 +1,8 @@
+event,candidate_id,column,value,detail,data_version
+zero_value,C00046,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C00108,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C00650,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C00651,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C00046,sodium_mg,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C00133,sat_fat_g,0,표시값 0을 실제 0으로 유지,v000-draft
+zero_value,C02252,sat_fat_g,0,표시값 0을 실제 0으로 유지,v000-draft

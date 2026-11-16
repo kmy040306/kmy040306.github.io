@@ -1,0 +1,11 @@
+check,status,detail,data_version
+product_id 중복 없음,pass,,v000-draft
+candidate_id 중복 없음,pass,,v000-draft
+series_id 빈칸 없음,pass,,v000-draft
+시리즈 안에서 food_group 일치,pass,,v000-draft
+시리즈 안에서 protein_claim 일치,pass,,v000-draft
+시리즈 안에서 basis_unit 일치,pass,,v000-draft
+기준 단위가 g 또는 mL,pass,,v000-draft
+음수 영양값 없음,pass,,v000-draft
+모든 제품이 원자료와 결합,pass,,v000-draft
+효율 계산 가능 (정보),pass,계산 불가 0개 ,v000-draft
