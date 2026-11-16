@@ -1,4 +1,4 @@
-#단백질 수치 없이 당류, 나트륜, 포화지방만 보고
+#단백질 수치 없이 당류, 나트륨, 포화지방만 보고
 #단백질 강조 제품인지 예측할 수 있는가?
 
 from pathlib import Path
@@ -38,10 +38,10 @@ N_SPLITS = 5
 
 
 def load_ml_data(statistics):
-    """ML表の形式と、統計表との識別情報の一致を確認する。"""
+    """ML표의 형식과 통계표의 식별 정보가 일치하는지 확인한다."""
     if not INPUT_PATH.is_file():
         raise FileNotFoundError(
-            f"入力ファイルがありません: {INPUT_PATH}"
+            f"입력 파일이 없습니다: {INPUT_PATH}"
         )
 
     data = pd.read_csv(
