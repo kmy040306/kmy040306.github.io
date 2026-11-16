@@ -39,3 +39,12 @@
 `assigned_to`, `food_group`, `screen_stratum`(0 = 키워드 없음, 1 = 이름에 단백질 키워드, 2 = 요거트 그릭류), `product_name`, `manufacturer`(위탁 생산 공장일 수 있음, 브랜드 아님), `rep_food_name`, `yogurt_style`, `ingredient_check`, `has_plant_protein`(1이면 유제품 기반인지 특히 확인), `auto_series_key`(자동 제안), `search_url`(네이버 검색 바로가기).
 
 판정은 단백질·열량·효율 값을 보고 정하지 않는다. 판정이 끝날 때까지 영양값을 열어보지 않는다.
+
+## 시리즈 ID 통합 (판정이 끝난 뒤)
+
+A(`S0001~`)와 B(`S0500~`)가 같은 제품 라인에 서로 다른 ID를 줄 수 있다. 통합은 자동으로 하지 않는다.
+
+1. `python A_data_eda/code/02_clean.py`를 실행하면 `shared/results/series_merge_suggestions.csv`에 자동 시리즈 키가 같은데 ID가 다른 경우가 나온다. 이 목록은 후보일 뿐이다(예: 같은 이름이라도 41g 라인, 무가당·가당 라인은 의도적으로 분리).
+2. 같은 라인으로 판단되면 `shared/docs/series_id_map.csv`에 한 줄 추가한다: `from_series_id,to_series_id,reason,decided_by,decided_at`. 최종 ID로 바로 적고 연쇄(A→B→C)는 쓰지 않는다.
+3. 다시 실행하면 `products.csv`의 `series_id`가 통합되고, 원래 제안 ID는 `proposed_series_id`에 남는다. 통합 내역은 `cleaning_log.csv`(`series_merged`)에 기록된다.
+4. 통합 후 한 시리즈 안에 집단·식품군·단위가 섞이면 `clean_checks.csv`에 fail이 남고 종료 코드 1로 끝난다. 이 상태로 v001을 확정하지 않는다.
