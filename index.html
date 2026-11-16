@@ -1,23 +1,233 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>고단백 식품 분석 프로젝트</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:50px auto;padding:0 24px;line-height:1.8;color:#173042;background:#f7fafc}section{background:white;padding:20px 28px;margin:18px 0;border:1px solid #dde5ee;border-radius:12px}a{color:#1756a9}h1{line-height:1.4}</style><h1>고단백 제품은 효율적인 단백질 공급원인가?</h1><p>식품 영양성분 데이터로 살펴보는 2인 분석 프로젝트</p><p><strong>분석 준비 중</strong> — 연구를 진행하며 분석 과정과 결과를 이곳에 정리할 예정입니다.</p><p><a href="https://github.com/kmy040306/kmy040306.github.io">프로젝트 저장소</a> · <a href="final/tutorial.ipynb">분석 노트북</a></p><section><h2>프로젝트 소개</h2><p>
-바·떠먹는 요거트·유제품 기반 음료를 대상으로 단백질 강조 제품과 일반 제품을 비교합니다. 같은 열량에서 얻는 단백질의 양은 얼마나 다른지, 다른 영양성분에는 어떤 차이가 있는지 데이터로 살펴보는 프로젝트입니다.
-</p></section><section><h2>1. 연구 동기</h2><p>
-‘고단백’이라는 문구가 붙은 제품은 단백질을 섭취하는 데 얼마나 효율적일까요? 단백질 함량뿐 아니라 함께 섭취하는 열량과 당류·나트륨·포화지방까지 비교해 보려 합니다.
-</p></section><section><h2>2. 비교할 제품과 데이터</h2><p>
-공공 식품영양성분 자료를 바탕으로 같은 식품군끼리 비교합니다. 단백질 강조 여부는 포장이나 제조사 공식 설명으로 확인하고, 같은 제품 라인에서 맛만 다른 제품은 하나의 시리즈로 묶습니다.
-</p></section><section><h2>3. 단백질 효율의 기준</h2><p>
-바·요거트는 100g, 음료는 100mL로 기준을 맞춥니다. 단백질 효율은 100kcal당 단백질의 양(g)으로 계산하고, 제품별 값을 시리즈 단위로 평균 내어 비교합니다.
-</p></section><section><h2>4. 영양성분 분포 살펴보기</h2><p>
-식품군별로 단백질 효율과 주요 영양성분의 분포를 그래프로 살펴봅니다. 평균만으로는 드러나지 않는 제품 간 차이와 자료가 부족한 부분도 함께 확인합니다.
-</p></section><section><h2>5. 통계로 비교하기</h2><p>
-시리즈 평균을 바탕으로 두 집단의 차이를 Welch 검정으로 살펴보고, 여러 항목을 비교하는 데 따른 오차를 보정합니다. 차이의 크기와 95% 신뢰구간, 부트스트랩 결과를 함께 해석할 계획입니다.
-</p></section><section><h2>6. 식품군에 따른 차이</h2><p>
-단백질 강조 제품과 일반 제품의 효율 차이가 바·요거트·음료에서 비슷하게 나타나는지도 궁금합니다. 충분한 자료가 확보되면 식품군과 단백질 강조 여부의 상호작용을 추가로 살펴봅니다.
-</p></section><section><h2>7. 영양성분으로 예측하기</h2><p>
-단백질 수치 없이 당류·나트륨·포화지방만으로 단백질 강조 제품을 구분할 수 있을까요? 식품군별로 로지스틱 회귀와 결정트리를 학습하고, 시리즈 단위 교차검증으로 단순한 기준 모델보다 잘 예측하는지 확인합니다.
-</p></section><section><h2>8. 단백질 20g을 먹는다면</h2><p>
-단백질 20g을 섭취할 때 필요한 양과 함께 먹게 되는 영양성분을 비교합니다. 단백질 강조 제품과 닭가슴살·계란·두부를 사례로 살펴보되, 조리 상태와 성분이 확인되는 자료를 사용합니다.
-</p></section><section><h2>9. 결과를 읽는 범위</h2><p>
-분석을 마치면 차이가 뚜렷한 부분과 그렇지 않은 부분을 함께 정리할 예정입니다. 이 연구는 수집한 제품의 영양성분을 비교하며, 가격이나 체내 흡수율, 전반적인 건강성을 평가하지는 않습니다.
-</p></section><section><h2>10. 분석 과정과 자료</h2><p>
-데이터 출처와 제품 선정 기준, 분석 코드와 결과를 저장소와 노트북에 정리할 예정입니다. 어떤 자료로 어떻게 비교했는지 확인할 수 있도록 분석 과정을 남깁니다.
-</p></section></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="바, 요거트, 유제품 기반 음료에서 단백질 강조 제품과 일반 제품의 단백질 효율과 영양성분을 비교합니다.">
+  <title>고단백 제품은 효율적인 단백질 공급원인가?</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f5f5;
+      --ink: #171717;
+      --muted: #525252;
+      --line: #cdcdcd;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.75 "Inter", system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    a { color: inherit; text-underline-offset: .24em; }
+    a:hover { text-decoration-thickness: .14em; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+    p { margin: 0; }
+    h1, h2, h3 { margin: 0; line-height: 1.24; letter-spacing: -.045em; }
+    h1 { max-width: 14em; font-size: clamp(2.25rem, 6vw, 4.6rem); }
+    h2 { font-size: clamp(1.75rem, 3.6vw, 2.65rem); }
+    h3 { font-size: 1.28rem; letter-spacing: -.025em; }
+    section[id], main[id] { scroll-margin-top: 1rem; }
+
+    .wrap { width: min(100% - 3rem, 70rem); margin-inline: auto; }
+    .skip { position: absolute; top: .75rem; left: .75rem; transform: translateY(-180%); background: #fff; padding: .45rem .75rem; }
+    .skip:focus { transform: none; }
+
+    .topbar, .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .6rem 1.5rem;
+    }
+
+    .topbar { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+    .topbar > a { font-weight: 750; }
+    .links { display: flex; flex-wrap: wrap; gap: .45rem 1.25rem; }
+    .links a, .label, .status { font-size: .875rem; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(13rem, 22%);
+      align-items: end;
+      gap: 1.8rem 3rem;
+      padding-block: clamp(2.75rem, 7vw, 6rem);
+    }
+
+    .lede { max-width: 37rem; margin-top: 1.25rem; font-size: 1.1rem; color: var(--muted); }
+    .status { margin-top: 1rem; color: var(--muted); }
+
+    .metric { padding: 1.15rem 0 0; border-top: 2px solid var(--ink); }
+    .label { font-weight: 700; }
+    .metric-value { font-size: clamp(2.15rem, 4vw, 3.25rem); letter-spacing: -.06em; line-height: 1.3; font-weight: 750; }
+    .metric p:last-child { font-size: .875rem; color: var(--muted); }
+
+    .section {
+      padding-block: clamp(2rem, 5vw, 3.75rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading { margin-bottom: 1.65rem; }
+    .section-heading p { max-width: 46rem; margin-top: .65rem; }
+
+    .design, .further {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem 2rem;
+      margin: 0;
+    }
+
+    .design dt { font-weight: 750; }
+    .design dd { margin: .4rem 0 0; color: var(--muted); }
+
+    .hypotheses { margin-top: 1.5rem; border-top: 2px solid var(--ink); }
+    .hypothesis {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: .75rem 2.5rem;
+      padding-block: 1.3rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .hypothesis .label { color: var(--muted); }
+    .hypothesis h3, .hypothesis p + p { margin-top: .35rem; }
+    .hypothesis div:last-child p:last-child, .further p { color: var(--muted); }
+
+    .note { max-width: 55rem; margin-top: 1.2rem; }
+    .further { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .further article { background: #fff; border: 1px solid var(--line); padding: 1.35rem; }
+    .further p { margin-top: .65rem; }
+
+    footer { background: var(--ink); color: #f7f7f7; }
+    .footer-links { padding-block: 1.5rem; }
+
+    @media (max-width: 42rem) {
+      .wrap { width: calc(100% - 2rem); }
+      .hero, .design, .further, .hypothesis { grid-template-columns: minmax(0, 1fr); }
+      .metric { max-width: 20rem; }
+      .design { gap: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="wrap topbar">
+    <a href="./">고단백 식품 분석</a>
+    <nav class="links" aria-label="페이지 내 이동">
+      <a href="#data">비교 기준</a>
+      <a href="#hypotheses">가설과 검증</a>
+      <a href="#further">추가 분석</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="project-title">
+      <div>
+        <h1 id="project-title">고단백 제품은 효율적인 단백질 공급원인가?</h1>
+        <p class="lede">같은 100kcal를 먹는다면 단백질을 얼마나 더 섭취할 수 있을까요? 바·떠먹는 요거트·유제품 기반 음료에서 단백질을 강조하는 제품과 일반 제품을 비교합니다.</p>
+        <p class="status">현재 제품 표시를 확인하고 분석 표본을 준비하고 있습니다.</p>
+      </div>
+      <div class="metric">
+        <p class="label">단백질 효율</p>
+        <p class="metric-value">g / 100 kcal</p>
+        <p>100kcal당 단백질의 양</p>
+      </div>
+    </section>
+
+    <section class="section" id="data" aria-labelledby="data-title">
+      <div class="section-heading">
+        <h2 id="data-title">무엇을 비교하나요?</h2>
+        <p>식품의약품안전처 가공식품 영양성분 데이터를 사용합니다. 같은 식품군에서 단백질 강조 제품과 일반 제품을 비교합니다.</p>
+      </div>
+      <dl class="design">
+        <div>
+          <dt>제품을 분류하는 기준</dt>
+          <dd>포장이나 제조사 공식 설명에서 단백질 강조 여부를 확인합니다. 근거가 충분하지 않은 제품은 주분석에서 제외합니다.</dd>
+        </div>
+        <div>
+          <dt>제품을 묶는 기준</dt>
+          <dd>같은 브랜드·제품 라인에서 맛만 다른 제품을 한 시리즈로 묶습니다. 제품별 지표를 계산하고 시리즈 안에서 평균을 냅니다.</dd>
+        </div>
+        <div>
+          <dt>영양성분을 비교하는 단위</dt>
+          <dd>바와 요거트는 100g당, 음료는 100mL당 비교합니다. 단백질 효율은 단백질(g)을 열량(kcal)으로 나누고 100을 곱합니다.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" id="hypotheses" aria-labelledby="hypotheses-title">
+      <div class="section-heading">
+        <h2 id="hypotheses-title">가설과 검증 방법</h2>
+        <p>먼저 시리즈 수와 영양성분 분포를 살펴보고, 집단 간 차이의 크기와 불확실성을 확인합니다.</p>
+      </div>
+
+      <div class="hypotheses">
+        <article class="hypothesis">
+          <div>
+            <p class="label">주가설</p>
+            <h3>단백질 강조 시리즈의 평균 단백질 효율이 더 높다</h3>
+          </div>
+          <div>
+            <p class="label">검증 방법</p>
+            <p>식품군별로 시리즈 평균 효율에 양측 Welch t 검정을 적용합니다. 강조 집단에서 일반 집단을 뺀 평균 차이가 양수인지 확인합니다.</p>
+          </div>
+        </article>
+        <article class="hypothesis">
+          <div>
+            <p class="label">부가설</p>
+            <h3>당류·나트륨·포화지방·열량의 평균에 각각 차이가 있다</h3>
+          </div>
+          <div>
+            <p class="label">검증 방법</p>
+            <p>같은 식품군 안에서 네 지표를 각각 양측 Welch t 검정으로 비교합니다. 평균 차이의 크기와 방향을 함께 확인합니다.</p>
+          </div>
+        </article>
+        <article class="hypothesis">
+          <div>
+            <p class="label">확장 가설</p>
+            <h3>단백질 효율의 집단 차이는 식품군마다 다르다</h3>
+          </div>
+          <div>
+            <p class="label">검증 방법</p>
+            <p>효율을 설명하는 회귀모형에서 단백질 강조 여부와 식품군의 상호작용을 검정합니다. 바·요거트·음료에서 집단 간 효율 차이가 얼마나 다른지 탐색합니다.</p>
+          </div>
+        </article>
+      </div>
+      <p class="note">주가설과 부가설의 검정은 Holm 방식으로 함께 보정합니다. 평균 차이와 95% 신뢰구간을 보고하고, 식품군·집단 내에서 시리즈를 다시 뽑는 부트스트랩으로 불확실성을 추가로 확인합니다.</p>
+    </section>
+
+    <section class="section" id="further" aria-labelledby="further-title">
+      <div class="section-heading">
+        <h2 id="further-title">예측과 사례 비교</h2>
+      </div>
+      <div class="further">
+        <article>
+          <h3>다른 성분만으로 단백질 강조 여부를 예측할 수 있을까?</h3>
+          <p>당류·나트륨·포화지방으로 식품군별 로지스틱 회귀와 깊이 3 결정트리를 학습합니다. 시리즈 단위 층화 5겹 교차검증에서 다수 집단 기준 모델과 비교하고, 균형 정확도와 단백질 강조 집단의 F1 점수를 확인합니다.</p>
+        </article>
+        <article>
+          <h3>단백질 20g을 먹으려면 얼마나 필요할까?</h3>
+          <p>식품군별 효율 상위 단백질 강조 시리즈를 삶은 닭가슴살·삶은 계란·두부와 비교합니다. 같은 단백질 20g에 필요한 식품의 양과 함께 섭취하는 열량·당류·나트륨·포화지방을 살펴봅니다.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-links">
+      <p class="label">데이터와 분석 자료</p>
+      <nav class="links" aria-label="자료 링크">
+        <a href="https://www.data.go.kr/data/15100066/standard.do">영양성분 데이터</a>
+        <a href="https://github.com/kmy040306/kmy040306.github.io/blob/main/shared/docs/selection_rules.md">제품 선정 규칙</a>
+        <a href="https://github.com/kmy040306/kmy040306.github.io/blob/main/final/tutorial.ipynb">분석 노트북</a>
+        <a href="https://github.com/kmy040306/kmy040306.github.io">GitHub 저장소</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
