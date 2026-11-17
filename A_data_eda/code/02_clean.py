@@ -31,7 +31,7 @@ PROCESSED = ROOT / "shared/data/processed"
 RESULTS = ROOT / "shared/results"
 SERIES_MAP = ROOT / "shared/docs/series_id_map.csv"
 MAP_COLS = ["from_series_id", "to_series_id", "reason", "decided_by", "decided_at"]
-DATA_VERSION = "v000-draft"          # A·B 판정과 B 검수가 끝나면 v001로 올린다
+DATA_VERSION = "v001"                # 2026-11-17 A·B 판정 통합 확정 (handoff_v001.md)
 
 DECISION_COLS = ["protein_claim", "claim_text", "evidence_url", "checked_at", "proposed_series_id",
                  "series_reason", "inclusion_status", "exclusion_reason", "notes"]

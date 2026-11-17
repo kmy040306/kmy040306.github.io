@@ -1,20 +1,20 @@
 event,candidate_id,column,value,detail,data_version
-series_merged,C00049,series_id,S0507 -> S0017,series_id_map.csv,v000-draft
-series_merged,C00652,series_id,S0515 -> S0053,series_id_map.csv,v000-draft
-series_merged,C02760,series_id,S0068 -> S0008,series_id_map.csv,v000-draft
-series_merged,C03033,series_id,S0521 -> S0070,series_id_map.csv,v000-draft
-cafe_drink_excluded,C00402,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
-cafe_drink_excluded,C01042,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
-cafe_drink_excluded,C01694,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
-cafe_drink_excluded,C01972,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
-zero_value,C00046,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00108,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00173,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00179,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00650,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00651,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00652,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00046,sodium_mg,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C00133,sat_fat_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C02252,sat_fat_g,0,표시값 0을 실제 0으로 유지,v000-draft
-zero_value,C02478,sat_fat_g,0,표시값 0을 실제 0으로 유지,v000-draft
+series_merged,C00049,series_id,S0507 -> S0017,series_id_map.csv,v001
+series_merged,C00652,series_id,S0515 -> S0053,series_id_map.csv,v001
+series_merged,C02760,series_id,S0068 -> S0008,series_id_map.csv,v001
+series_merged,C03033,series_id,S0521 -> S0070,series_id_map.csv,v001
+cafe_drink_excluded,C00402,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v001
+cafe_drink_excluded,C01042,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v001
+cafe_drink_excluded,C01694,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v001
+cafe_drink_excluded,C01972,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v001
+zero_value,C00046,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00108,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00173,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00179,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00650,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00651,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00652,sugar_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00046,sodium_mg,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C00133,sat_fat_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C02252,sat_fat_g,0,표시값 0을 실제 0으로 유지,v001
+zero_value,C02478,sat_fat_g,0,표시값 0을 실제 0으로 유지,v001
