@@ -1,0 +1,2 @@
+﻿data_version,analysis_type,formula,food_groups,n_groups,n_series,covariance,test,statistic,df,p_value,status
+v001,exploratory,efficiency_mean ~ protein_claim * C(food_group),bar|yogurt|dairy_drink,3,92,HC3,joint_Wald_chi2,16.057001751368315,2,0.000326036612153522,ok
