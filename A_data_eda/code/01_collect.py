@@ -44,6 +44,8 @@ CAFE_DRINK = (r"라[떼테]|래떼|밀크\s*(?:티|차)|커피|콜드\s*브루|�
               r"|마[키끼]아[토또]|마끼야또|흑당\s*티|버블\s*티"
               r"|latte|milk[\s-]*tea|coffee|cold[\s-]*brew|cappuccino|espresso|americano|macchiato")
 CAFE_FLAVOR = r"(?:" + CAFE_DRINK + r")\s*(?:맛|향|flavou?r(?:ed)?\b)"
+# 추출 틀(sampling frame)에서 액상음료에만 쓰던 기존 제외어. 이미 판정한 표본을 그대로 재현하기 위해 유지한다.
+FRAME_LIQUID_EXCL = r"커피|라떼|콜드브루"
 LIQUID_EXCL = (r"두유|아몬드|오트|귀리|옥수수|식물성|비건|탄산|스파클링|차$|티$|주스|에이드"
                r"|워터|water|이온")
 DAIRY_ING = r"우유|원유|분유|유단백|카제인|유청|산양유|유크림|농축유|연유|우유단백"
@@ -115,18 +117,19 @@ def select_groups(df, ingredients, flow):
 
     # dairy_drink: 우유류 코드 + 유제품 원료가 확인되는 액상음료
     dairy = rep.isin(DAIRY_REPS)
-    liquid = rep.eq("액상음료") & ~has(name, LIQUID_EXCL)
+    liquid = rep.eq("액상음료") & ~has(name, LIQUID_EXCL) & ~has(name, FRAME_LIQUID_EXCL)
     flow.append(("dairy_drink", "1_category", (dairy | liquid).sum()))
     keep_base = base.eq("100ml")
     flow.append(("dairy_drink", "2_basis_100ml", ((dairy | liquid) & keep_base).sum()))
-    # 우유류와 액상음료에 같은 제외 기준을 적용한다.
-    # 단백질 음료에 맛·향으로만 명시된 표현은 음료 유형 판정에서 뺀다.
+    # 라떼·밀크티·커피 유형(decisions ②, 2026-11-16)은 우유류·액상음료 모두에서 제외한다.
+    # 단, 이미 판정한 표본이 바뀌지 않도록 추출 틀에서는 빼지 않고 cafe_drink=1로 표시만 한다.
+    # 표시된 제품은 02_clean에서 판정과 관계없이 제외하고, 06_pool 보조 분석에서도 뺀다.
+    # 무작위 추출 뒤 대상 아닌 제품을 빼는 것이므로 남은 표본은 여전히 대상 모집단의 무작위 표본이다.
     without_flavor = name.str.replace(CAFE_FLAVOR, "", case=False, regex=True)
     drink_name = name.where(~has(name, PROTEIN_WORDS), without_flavor)
-    keep_form = ~has(drink_name, CAFE_DRINK)
-    flow.append(("dairy_drink", "2b_exclude_cafe_drinks", ((dairy | liquid) & keep_base & keep_form).sum()))
-    d = df[dairy & keep_base & keep_form].assign(ingredient_check="dairy_code", has_plant_protein="")
-    lq = df[liquid & keep_base & keep_form].copy()
+    cafe = has(drink_name, CAFE_DRINK)
+    d = df[dairy & keep_base].assign(ingredient_check="dairy_code", has_plant_protein="")
+    lq = df[liquid & keep_base].copy()
     ing = lq["품목제조보고번호"].map(ingredients)
     lq["has_plant_protein"] = np.where(has(ing, PLANT_ING), "1", "0")
     matched_dairy = ing.notna() & has(ing, DAIRY_ING)
@@ -135,9 +138,11 @@ def select_groups(df, ingredients, flow):
     lq.loc[unmatched_screen, "has_plant_protein"] = ""
     lq = lq[matched_dairy | unmatched_screen]
     dd = pd.concat([d, lq]).assign(food_group="dairy_drink", yogurt_style="")
+    dd["cafe_drink"] = np.where(cafe.loc[dd.index], "1", "")
     flow.append(("dairy_drink", "3_dairy_base_check", len(dd)))
+    flow.append(("dairy_drink", "3b_cafe_drink_flagged", (dd["cafe_drink"] == "1").sum()))
     out.append(dd)
-    return pd.concat(out, ignore_index=True)
+    return pd.concat(out, ignore_index=True).fillna({"cafe_drink": ""})
 
 
 def drop_duplicates(c, flow):
@@ -205,6 +210,8 @@ def main():
     cand = assign_reviewers(stratified_sample(cand))
     for (g, s), n in cand[cand["sampled"] == 1].groupby(["food_group", "screen_stratum"])["auto_series_key"].nunique().items():
         flow.append((g, f"5_sampled_series_stratum{s}", n))
+    flow.append(("dairy_drink", "6_sampled_cafe_drink_excluded",
+                 ((cand["sampled"] == 1) & (cand["cafe_drink"] == "1")).sum()))
 
     out = cand.rename(columns={"식품명": "product_name", "제조사명": "manufacturer", "식품코드": "source_food_code",
                                "품목제조보고번호": "report_no", "대표식품명": "rep_food_name",
@@ -213,7 +220,7 @@ def main():
     out["basis_unit"] = out["basis_unit"].str.replace("ml", "mL")
     cols = ["candidate_id", "product_name", "brand", "manufacturer", "food_group", "source_id", "source_food_code",
             "assigned_to", "report_no", "rep_food_name", "basis_unit", "yogurt_style", "ingredient_check",
-            "has_plant_protein", "dup_conflict", "auto_series_key", "screen_stratum", "series_rank", "sampled"]
+            "has_plant_protein", "dup_conflict", "auto_series_key", "screen_stratum", "series_rank", "sampled", "cafe_drink"]
     out[cols].to_csv(RAW / "candidates.csv", index=False, encoding="utf-8")
     RESULTS.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(flow, columns=["food_group", "step", "n_rows"]).to_csv(RESULTS / "prescreen_flow.csv", index=False)
