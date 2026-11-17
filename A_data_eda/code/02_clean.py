@@ -199,6 +199,12 @@ def main():
     log = []
     decided, conflicts = resolve(load_reviews())
     decided = apply_series_map(decided, load_series_map(), log)
+    # 라떼·밀크티·커피 유형은 추출 뒤 판정과 관계없이 제외한다 (01_collect의 cafe_drink 표시).
+    cafe_ids = set(cand.loc[(cand["sampled"] == "1") & (cand["cafe_drink"] == "1"), "candidate_id"])
+    for cid in sorted(cafe_ids):
+        log.append({"event": "cafe_drink_excluded", "candidate_id": cid, "column": "cafe_drink", "value": "1",
+                    "detail": "라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②)"})
+    decided = decided[~decided["candidate_id"].isin(cafe_ids)]
 
     products = build_products(cand, decided, source, log)
     checks = check_products(products, log)
@@ -209,6 +215,9 @@ def main():
     status["inclusion_status"] = status["inclusion_status"].fillna("not_reviewed")
     unknown = (status["inclusion_status"] == "include") & ~status["protein_claim"].isin(["0", "1"])
     status.loc[unknown, ["inclusion_status", "exclusion_reason"]] = ["exclude", "claim_unknown"]
+    cafe = status["candidate_id"].isin(cafe_ids)
+    status.loc[cafe, ["inclusion_status", "exclusion_reason", "notes"]] = [
+        "exclude", "out_of_scope_form", "라떼·밀크티·커피 유형 (추출 후 제외)"]
     ex = status[status["inclusion_status"] != "include"].assign(stage="review")
     ex = ex.rename(columns={"exclusion_reason": "reason_code", "notes": "detail", "checked_at": "decided_at"})
     ex["reason_code"] = ex["reason_code"].replace("", "unspecified").fillna(ex["inclusion_status"])

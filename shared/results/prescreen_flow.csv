@@ -8,6 +8,7 @@ yogurt,3_exclude_drinkable,1198
 dairy_drink,1_category,7347
 dairy_drink,2_basis_100ml,5636
 dairy_drink,3_dairy_base_check,2012
+dairy_drink,3b_cafe_drink_flagged,161
 bar,4_after_dedup,337
 dairy_drink,4_after_dedup,1909
 yogurt,4_after_dedup,1185
@@ -17,4 +18,5 @@ dairy_drink,5_sampled_series_stratum0,30
 dairy_drink,5_sampled_series_stratum1,30
 yogurt,5_sampled_series_stratum0,30
 yogurt,5_sampled_series_stratum1,15
-yogurt,5_sampled_series_stratum2,30
+yogurt,5_sampled_series_stratum2,50
+dairy_drink,6_sampled_cafe_drink_excluded,4

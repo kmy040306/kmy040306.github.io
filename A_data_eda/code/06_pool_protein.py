@@ -60,6 +60,7 @@ def protein_level(row):
 
 def load_pool():
     cand = pd.read_csv(RAW / "candidates.csv", dtype=str, keep_default_na=False)
+    cand = cand[cand["cafe_drink"] != "1"]  # 라떼·밀크티·커피 유형은 범위 밖 (decisions ②)
     src = pd.read_csv(RAW / "processed_foods_mfds.csv", dtype=str, encoding="utf-8-sig",
                       usecols=["식품코드", *COLS])
     pool = cand.merge(src, left_on="source_food_code", right_on="식품코드", how="left", validate="many_to_one")

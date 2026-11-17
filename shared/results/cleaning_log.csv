@@ -1,4 +1,8 @@
 event,candidate_id,column,value,detail,data_version
+cafe_drink_excluded,C00402,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
+cafe_drink_excluded,C01042,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
+cafe_drink_excluded,C01694,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
+cafe_drink_excluded,C01972,cafe_drink,1,라떼·밀크티·커피 유형 → 판정과 관계없이 제외 (decisions ②),v000-draft
 zero_value,C00046,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
 zero_value,C00108,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
 zero_value,C00650,sugar_g,0,표시값 0을 실제 0으로 유지,v000-draft
