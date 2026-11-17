@@ -77,8 +77,8 @@ C00909,dairy_drink,review,not_reviewed,not_reviewed,,,
 C00934,dairy_drink,review,not_reviewed,not_reviewed,,,
 C01042,dairy_drink,review,exclude,out_of_scope_form,라떼·밀크티·커피 유형 (추출 후 제외),,
 C01061,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01248,dairy_drink,review,hold,awaiting_second_review,"[포장] 팩 정면은 1급A 원유·별꿀·6곡 강조, 단백질 강조 없음",A,2026-11-17
-C01265,dairy_drink,review,hold,awaiting_second_review,"[공식] 제조사·공식몰 정식 명칭/설명 유단백+대두단백 혼합, 원유·우유단백 기반으로 판단",A,2026-11-15
+C01248,dairy_drink,review,hold,awaiting_second_review,"[포장] 11번가 상품 이미지 팩 정면은 국산 1급A 원유·달콤한 별꿀·든든한 6곡 레시피, 단백질 강조 없음",A,2026-11-17
+C01265,dairy_drink,review,hold,awaiting_second_review,[공식] 매일유업 공식몰 셀렉스 프로틴 음료 설명(부족한 단백질을 맛있고 간편하게). DB 영양값 당류 6.4g/100mL로 로우슈거(1.28g)가 아닌 오리지널 계열. 버전과 관계없이 셀렉스 프로틴 음료는 단백질 강조,A,2026-11-15
 C01266,dairy_drink,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 C01265(공동 판정)와 같은 제품, 공장만 다름",A,2026-11-16
 C01267,dairy_drink,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 C01265(공동 판정)와 같은 제품, 공장만 다름",A,2026-11-16
 C01268,dairy_drink,review,not_reviewed,not_reviewed,,,
@@ -107,7 +107,7 @@ C02119,dairy_drink,review,exclude,out_of_scope_form,[공식] 제조사·공식�
 C02120,dairy_drink,review,not_reviewed,not_reviewed,,,
 C02121,dairy_drink,review,hold,other,판매자 제목(마시는 단백질)만 확인. 같은 브랜드 퍼펙트 파워쉐이크 RTD 포장은 있으나 이 제품(아이스 초코맛)과 같은지 확인 못함 → 보류,A,2026-11-17
 C02127,dairy_drink,review,exclude,duplicate,[공식] 제조사·공식몰 정식 명칭/설명 C02124 초코의 재등록(2)으로 추정,A,2026-11-16
-C02144,dairy_drink,review,hold,awaiting_second_review,[공식] 제조사·공식몰 정식 명칭/설명 야채·곡물 음료에 식물성 단백질,A,2026-11-15
+C02144,dairy_drink,review,hold,awaiting_second_review,"[공식] 제조사·공식몰 정식 명칭/설명 야채·곡물 음료에 식물성 단백질 / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
 C02156,dairy_drink,review,hold,discontinued_or_not_found,제품 페이지 미확인,A,2026-11-16
 C02165,dairy_drink,review,not_reviewed,not_reviewed,,,
 C02183,dairy_drink,review,not_reviewed,not_reviewed,,,
@@ -117,7 +117,7 @@ C02251,yogurt,review,not_reviewed,not_reviewed,,,
 C02262,yogurt,review,not_reviewed,not_reviewed,,,
 C02301,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함,A,2026-11-17
 C02354,yogurt,review,not_reviewed,not_reviewed,,,
-C02359,yogurt,review,hold,awaiting_second_review,[포장] 컵 띠지 정면(플레인 그릭요거트 with 카카오 그래놀라)에 단백질 강조 없음,A,2026-11-17
+C02359,yogurt,review,hold,awaiting_second_review,"[포장] 롯데마트 제타 상품 이미지 컵 띠지 정면(YOZM, 플레인 그릭요거트 with 카카오 그래놀라, 중량·열량)에 단백질 강조 없음",A,2026-11-17
 C02365,yogurt,review,hold,awaiting_second_review,토핑(프로틴뮤즐리)에만 프로틴 표기. 요거트 본체·제품 전체 강조를 포장·공식 페이지에서 확인 못함(GS25 협업 단종 추정) → 기준 ③에 따라 보류,A,2026-11-17
 C02424,yogurt,review,not_reviewed,not_reviewed,,,
 C02438,yogurt,review,not_reviewed,not_reviewed,,,
@@ -198,7 +198,7 @@ C03285,yogurt,review,hold,other,제조사 목록에 Lactose-free 10%와 High Pro
 C03288,yogurt,review,not_reviewed,not_reviewed,,,
 C03349,yogurt,review,not_reviewed,not_reviewed,,,
 C03350,yogurt,review,not_reviewed,not_reviewed,,,
-C03351,yogurt,review,hold,awaiting_second_review,마시는 발효유(윌),A,2026-11-15
+C03351,yogurt,review,hold,awaiting_second_review,"마시는 발효유(윌) / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
 C03365,yogurt,review,not_reviewed,not_reviewed,,,
 C03367,yogurt,review,not_reviewed,not_reviewed,,,
 C03368,yogurt,review,not_reviewed,not_reviewed,,,
