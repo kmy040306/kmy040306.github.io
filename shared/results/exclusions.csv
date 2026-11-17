@@ -1,209 +1,165 @@
 candidate_id,food_group,stage,inclusion_status,reason_code,detail,reviewer,decided_at
-C00005,bar,review,not_reviewed,not_reviewed,,,
-C00007,bar,review,not_reviewed,not_reviewed,,,
-C00009,bar,review,not_reviewed,not_reviewed,,,
-C00027,bar,review,not_reviewed,not_reviewed,,,
-C00029,bar,review,hold,awaiting_second_review,[공식] 곰곰은 쿠팡 자체 브랜드라 쿠팡 상품 페이지가 공식 쿠팡 PB. 제품명의 '단백질바' 표기를 강조로 인정할지 공동 확인 필요,A,2026-11-15
-C00039,bar,review,not_reviewed,not_reviewed,,,
+C00007,bar,review,hold,other,롯데ON 판매 상세만 확인. 브랜드 공식 제품 설명 또는 포장 확인 필요,B,2026-11-17
+C00009,bar,review,hold,other,공급 채널에서 확인되는 제품의 포장 또는 공식 설명 추가 확인 필요,B,2026-11-17
+C00027,bar,review,hold,other,유통 페이지만 확인. 정확한 제품 포장 또는 제조사 설명 필요,B,2026-11-17
+C00039,bar,review,hold,other,제조사 사업 영역은 확인. 동일 그래놀라 바의 포장 또는 공식 설명 필요,B,2026-11-17
 C00045,bar,review,hold,discontinued_or_not_found,맑은농산 넛츠바 초코 미니 페이지 미확인,A,2026-11-16
-C00049,bar,review,not_reviewed,not_reviewed,,,
-C00056,bar,review,not_reviewed,not_reviewed,,,
-C00057,bar,review,not_reviewed,not_reviewed,,,
-C00058,bar,review,not_reviewed,not_reviewed,,,
-C00061,bar,review,not_reviewed,not_reviewed,,,
+C00056,bar,review,hold,other,수입 제품 상세 확인. 공장·코드 차이가 있는 행의 동일 제품 여부와 포장 확인 필요,B,2026-11-17
+C00057,bar,review,hold,other,수입 제품 상세 확인. 공장·코드 차이가 있는 행의 동일 제품 여부와 포장 확인 필요,B,2026-11-17
+C00058,bar,review,hold,other,수입 제품 상세 확인. 공장·코드 차이가 있는 행의 동일 제품 여부와 포장 확인 필요,B,2026-11-17
+C00061,bar,review,hold,other,품목 DB 자료 외에 넷플릭스 협업 상품의 실제 포장 확인 필요,B,2026-11-17
 C00070,bar,review,exclude,duplicate,"[포장] C00069와 같은 제품. C00069와 같은 제품, 포장 용량만 다름",A,2026-11-17
 C00077,bar,review,hold,discontinued_or_not_found,제품 페이지 미확인,A,2026-11-16
-C00098,bar,review,not_reviewed,not_reviewed,,,
+C00098,bar,review,hold,other,동일한 율무사과맛의 포장 또는 제조사 설명 확인 필요,B,2026-11-17
 C00107,bar,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 여러 맛 혼합 버라이어티팩, C00108과 같은 라인",A,2026-11-16
-C00113,bar,review,not_reviewed,not_reviewed,,,
-C00117,bar,review,not_reviewed,not_reviewed,,,
-C00118,bar,review,not_reviewed,not_reviewed,,,
-C00135,bar,review,not_reviewed,not_reviewed,,,
-C00137,bar,review,not_reviewed,not_reviewed,,,
-C00140,bar,review,not_reviewed,not_reviewed,,,
-C00145,bar,review,not_reviewed,not_reviewed,,,
-C00147,bar,review,not_reviewed,not_reviewed,,,
-C00148,bar,review,not_reviewed,not_reviewed,,,
-C00158,bar,review,not_reviewed,not_reviewed,,,
-C00161,bar,review,not_reviewed,not_reviewed,,,
-C00164,bar,review,not_reviewed,not_reviewed,,,
-C00173,bar,review,not_reviewed,not_reviewed,,,
-C00174,bar,review,not_reviewed,not_reviewed,,,
-C00175,bar,review,not_reviewed,not_reviewed,,,
-C00179,bar,review,not_reviewed,not_reviewed,,,
-C00189,bar,review,not_reviewed,not_reviewed,,,
-C00190,bar,review,not_reviewed,not_reviewed,,,
-C00202,bar,review,not_reviewed,not_reviewed,,,
-C00207,bar,review,not_reviewed,not_reviewed,,,
-C00216,bar,review,not_reviewed,not_reviewed,,,
-C00218,bar,review,hold,awaiting_second_review,공식 목록에 유산균바·단백질바가 별도 라인,A,2026-11-15
-C00220,bar,review,not_reviewed,not_reviewed,,,
-C00225,bar,review,hold,awaiting_second_review,제품 페이지 미확인(같은 브랜드 현미찰떡만 검색됨),A,2026-11-15
-C00227,bar,review,not_reviewed,not_reviewed,,,
-C00228,bar,review,not_reviewed,not_reviewed,,,
+C00113,bar,review,hold,other,유통 페이지 외에 동일 제품 포장 또는 브랜드 제품 설명 확인 필요,B,2026-11-17
+C00117,bar,review,hold,other,브랜드 후보 확인. 무설탕 크린베리 견과바의 포장과 중복 여부 확인 필요,B,2026-11-17
+C00118,bar,review,hold,other,브랜드 후보 확인. 무설탕 크린베리 견과바의 포장과 중복 여부 확인 필요,B,2026-11-17
+C00135,bar,review,hold,other,올리브영 소프트바 목록에 카라멜초코와 코코초코가 같이 있어 후보의 초코 맛 특정 필요,B,2026-11-17
+C00147,bar,review,hold,other,화이트맛 판매 상세 확인. 동일 상품 포장과 중복 여부 확인 필요,B,2026-11-17
+C00148,bar,review,hold,other,화이트맛 판매 상세 확인. 동일 상품 포장과 중복 여부 확인 필요,B,2026-11-17
+C00174,bar,review,hold,other,씽크 공식 Chunky Peanut Butter 제품 확인. 제조 공장이 다른 두 행의 동일 제품 여부 확인 필요,B,2026-11-17
+C00175,bar,review,hold,other,씽크 공식 Chunky Peanut Butter 제품 확인. 제조 공장이 다른 두 행의 동일 제품 여부 확인 필요,B,2026-11-17
+C00189,bar,review,hold,other,액티핏의 실제 포장과 이름 끝에 #이 붙은 행의 중복 여부 확인 필요,B,2026-11-17
+C00190,bar,review,hold,other,액티핏의 실제 포장과 이름 끝에 #이 붙은 행의 중복 여부 확인 필요,B,2026-11-17
+C00207,bar,review,hold,other,정확한 맛의 판매 상세를 찾음. 포장 앞면 또는 공식 설명 확인 필요,B,2026-11-17
+C00216,bar,review,hold,other,엔트리 단백질바 포장 또는 브랜드의 공식 제품 설명 확인 필요,B,2026-11-17
+C00220,bar,review,hold,other,품목명으로 확인되는 후기·영양 자료만 있음. 바 형태의 해당 딸기 제품 포장 확인 필요,B,2026-11-17
+C00225,bar,review,hold,discontinued_or_not_found,제품 페이지 미확인(같은 브랜드 현미찰떡만 검색됨),A,2026-11-15
+C00227,bar,review,hold,other,제조사와 맛 정보만으로 소매 브랜드 및 포장을 특정하기 어려움,B,2026-11-17
+C00228,bar,review,hold,other,제조사와 맛 정보만으로 소매 브랜드 및 포장을 특정하기 어려움,B,2026-11-17
 C00253,bar,review,hold,discontinued_or_not_found,제품 페이지 미확인(영양 DB 사이트만 검색),A,2026-11-16
 C00273,bar,review,hold,discontinued_or_not_found,제품 페이지 미확인(영양 DB 사이트만 검색),A,2026-11-16
 C00288,bar,review,exclude,duplicate,[포장] 바·상자 정면에 20g PROTEIN,A,2026-11-17
 C00289,bar,review,exclude,duplicate,[포장] 바·상자 정면에 20g PROTEIN,A,2026-11-17
 C00299,bar,review,hold,other,"판매처 텍스트(Migros)만 확인. 제조사 공식몰에 현재 제품 없음, 포장 사진 확인 못함 → 기준 ③에 따라 보류",A,2026-11-17
-C00306,bar,review,not_reviewed,not_reviewed,,,
-C00307,bar,review,hold,awaiting_second_review,"[공식] 제조사·공식몰 정식 명칭/설명 제조사 GUSTAV BERNING은 위탁 생산, 브랜드는 허벌라이프",A,2026-11-15
-C00312,bar,review,not_reviewed,not_reviewed,,,
-C00313,bar,review,not_reviewed,not_reviewed,,,
-C00316,bar,review,not_reviewed,not_reviewed,,,
+C00306,bar,review,hold,other,품목 DB만 확인. 에스앤푸드 제품의 실제 브랜드와 포장 확인 필요,B,2026-11-17
+C00316,bar,review,hold,other,품목 DB 자료만 확인. 피코크의 실제 제품명과 포장 확인 필요,B,2026-11-17
 C00318,bar,review,hold,discontinued_or_not_found,제품 페이지 미확인,A,2026-11-16
 C00327,bar,review,hold,discontinued_or_not_found,교아당 공식몰에 해당 제품 없음,A,2026-11-16
-C00332,bar,review,not_reviewed,not_reviewed,,,
-C00333,bar,review,not_reviewed,not_reviewed,,,
-C00368,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00333,bar,review,hold,other,품목 검색 자료만 확인. 포장 및 동일 홍삼에너지바 중복 여부 확인 필요,B,2026-11-17
+C00368,dairy_drink,review,hold,other,서울F&B 홈페이지에서 88바나나우유 상세 확인 필요,B,2026-11-17
 C00402,dairy_drink,review,exclude,out_of_scope_form,라떼·밀크티·커피 유형 (추출 후 제외),,
-C00417,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00417,dairy_drink,review,exclude,out_of_scope_form,수입 판매 상세에서 워터형 제품 확인,B,2026-11-17
 C00447,dairy_drink,review,exclude,duplicate,"C00446과 같은 제품, 생산 공장만 다름",A,2026-11-16
-C00455,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00456,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00513,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00455,dairy_drink,review,hold,other,건국우유 딸기맛 유통 상세 확인. 포장과 공식 설명 추가 확인 필요,B,2026-11-17
+C00456,dairy_drink,review,hold,other,우유에 반했다쿠 계열의 초코맛 포장과 브랜드 확인 필요,B,2026-11-17
+C00513,dairy_drink,review,hold,other,공식 발표에서 사과 제로슈가 음료 확인. 후보에는 유제품 원료가 표시돼 해당 음료의 원재료 확인 필요,B,2026-11-17
 C00525,dairy_drink,review,hold,discontinued_or_not_found,"제품 특정 불가, 포장·공식 페이지 확인 못함 → 기준 ③에 따라 보류",A,2026-11-17
-C00535,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00536,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00537,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00535,dairy_drink,review,hold,other,굿밀크 세 가지 맛의 실제 브랜드·포장 또는 공식 설명 확인 필요,B,2026-11-17
+C00536,dairy_drink,review,hold,other,굿밀크 세 가지 맛의 실제 브랜드·포장 또는 공식 설명 확인 필요,B,2026-11-17
+C00537,dairy_drink,review,hold,other,굿밀크 세 가지 맛의 실제 브랜드·포장 또는 공식 설명 확인 필요,B,2026-11-17
 C00595,dairy_drink,review,exclude,duplicate,C00594와 같은 제품 반복 수록,A,2026-11-16
-C00630,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00652,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00657,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00630,dairy_drink,review,hold,other,동원 네스퀵 초콜릿맛 판매 상세 확인. 포장 또는 제조사 설명 추가 확인 필요,B,2026-11-17
+C00657,dairy_drink,review,hold,other,매일유업 공식 페이지는 컵 제품. 후보 Delight와의 동일 여부 확인 필요,B,2026-11-17
 C00825,dairy_drink,review,exclude,duplicate,[공식] 제조사·공식몰 정식 명칭/설명 C00824와 같은 제품 반복 수록,A,2026-11-16
-C00826,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00826,dairy_drink,review,hold,other,올드페리도넛 얼그레이 유통 상세 확인. 액상 형태 및 포장·브랜드 설명 확인 필요,B,2026-11-17
 C00838,dairy_drink,review,exclude,non_dairy,혼합탈지분유 0.37%의 어린이 음료(같은 회사 헬로카봇 밀크맛 기준),A,2026-11-16
-C00909,dairy_drink,review,not_reviewed,not_reviewed,,,
-C00934,dairy_drink,review,not_reviewed,not_reviewed,,,
+C00909,dairy_drink,review,hold,other,남양유업 우유GT 저지방 라인은 확인. 고칼슘 품목과 일치하는 상세·포장 확인 필요,B,2026-11-17
+C00934,dairy_drink,review,hold,other,메디웰 관련 영양식 자료는 찾았으나 해당 활력플러스 품목과 특수의료용도 여부 확인 필요,B,2026-11-17
 C01042,dairy_drink,review,exclude,out_of_scope_form,라떼·밀크티·커피 유형 (추출 후 제외),,
-C01061,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01248,dairy_drink,review,hold,awaiting_second_review,"[포장] 11번가 상품 이미지 팩 정면은 국산 1급A 원유·달콤한 별꿀·든든한 6곡 레시피, 단백질 강조 없음",A,2026-11-17
-C01265,dairy_drink,review,hold,awaiting_second_review,[공식] 매일유업 공식몰 셀렉스 프로틴 음료 설명(부족한 단백질을 맛있고 간편하게). DB 영양값 당류 6.4g/100mL로 로우슈거(1.28g)가 아닌 오리지널 계열. 버전과 관계없이 셀렉스 프로틴 음료는 단백질 강조,A,2026-11-15
+C01061,dairy_drink,review,hold,other,LG생활건강의 베비언스 브랜드만 확인. 킨더밀쉬 홍삼 맛 제품 자료 필요,B,2026-11-17
 C01266,dairy_drink,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 C01265(공동 판정)와 같은 제품, 공장만 다름",A,2026-11-16
 C01267,dairy_drink,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 C01265(공동 판정)와 같은 제품, 공장만 다름",A,2026-11-16
-C01268,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01294,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01331,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01346,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01372,dairy_drink,review,not_reviewed,not_reviewed,,,
+C01294,dairy_drink,review,hold,other,유통 상세 확인. 포장 이미지 또는 브랜드 제품 설명 확인 필요,B,2026-11-17
+C01331,dairy_drink,review,hold,other,브랜드 사이트 확인. 깔루아 밀크의 원재료와 판매 형태 추가 확인 필요,B,2026-11-17
+C01346,dairy_drink,review,hold,other,오케이에프음료의 해당 스무디레드 포장과 유제품 원료 확인 필요,B,2026-11-17
+C01372,dairy_drink,review,hold,other,파스퇴르 공장 자료만 확인. 후보의 정확한 판매명과 포장 필요,B,2026-11-17
 C01418,dairy_drink,review,hold,discontinued_or_not_found,"건강음료로 추정, 제품 페이지 미확인",A,2026-11-16
 C01441,dairy_drink,review,exclude,non_dairy,코코넛 밀크(식물성),A,2026-11-16
-C01487,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01488,dairy_drink,review,not_reviewed,not_reviewed,,,
-C01495,dairy_drink,review,hold,awaiting_second_review,"공식몰 목록에 제품 미확인, 포장 사진 못 찾음 → 기준 ③에 따라 보류(이전 판정 0은 근거 약함)",A,2026-11-17
-C01511,dairy_drink,review,not_reviewed,not_reviewed,,,
+C01495,dairy_drink,review,hold,other,"공식몰 목록에 제품 미확인, 포장 사진 못 찾음 → 기준 ③에 따라 보류(이전 판정 0은 근거 약함) / 2026-11-17 재확인: 연세우유 멜론우유(동원몰 포장 사진, 단백질 강조 없음)는 찾았으나 후보 제조사가 남양유업 경주공장이라 같은 제품인지 확인 불가, 보류 유지",A,2026-11-17
 C01694,dairy_drink,review,exclude,out_of_scope_form,라떼·밀크티·커피 유형 (추출 후 제외),,
 C01774,dairy_drink,review,exclude,out_of_scope_form,[공식] 제조사·공식몰 정식 명칭/설명 프로틴 워터(물 형태),A,2026-11-16
 C01932,dairy_drink,review,exclude,non_dairy,코코넛 밀크(식물성),A,2026-11-16
 C01972,dairy_drink,review,exclude,out_of_scope_form,라떼·밀크티·커피 유형 (추출 후 제외),,
-C02009,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02010,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02043,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02044,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02105,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02115,dairy_drink,review,not_reviewed,not_reviewed,,,
+C02010,dairy_drink,review,hold,other,공식 직영몰에서 품목별 상세 찾기와 플레인·곡물맛 포장 확인 필요,B,2026-11-17
+C02044,dairy_drink,review,hold,other,동명 공식 페이지 제품은 분말. 후보 액상음료와 동일 여부 확인 필요,B,2026-11-17
+C02115,dairy_drink,review,hold,other,매일유업 단백질 음료 관련 자료 확인. 프로틴유 쉐이크와 같은 품목인지 확인 필요,B,2026-11-17
 C02116,dairy_drink,review,hold,duplicate,"셀렉스 프로틴 음료와 같은 제품으로 추정, 확인 필요",A,2026-11-16
 C02119,dairy_drink,review,exclude,out_of_scope_form,[공식] 제조사·공식몰 정식 명칭/설명 프로틴 워터,A,2026-11-16
-C02120,dairy_drink,review,not_reviewed,not_reviewed,,,
+C02120,dairy_drink,review,exclude,out_of_scope_form,공식 제품군에서 복숭아·망고 맛 워터형 음료 확인,B,2026-11-17
 C02121,dairy_drink,review,hold,other,판매자 제목(마시는 단백질)만 확인. 같은 브랜드 퍼펙트 파워쉐이크 RTD 포장은 있으나 이 제품(아이스 초코맛)과 같은지 확인 못함 → 보류,A,2026-11-17
 C02127,dairy_drink,review,exclude,duplicate,[공식] 제조사·공식몰 정식 명칭/설명 C02124 초코의 재등록(2)으로 추정,A,2026-11-16
-C02144,dairy_drink,review,hold,awaiting_second_review,"[공식] 제조사·공식몰 정식 명칭/설명 야채·곡물 음료에 식물성 단백질 / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
-C02156,dairy_drink,review,hold,discontinued_or_not_found,제품 페이지 미확인,A,2026-11-16
-C02165,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02183,dairy_drink,review,not_reviewed,not_reviewed,,,
-C02184,dairy_drink,review,not_reviewed,not_reviewed,,,
+C02144,dairy_drink,review,exclude,non_dairy,"[공식] 제조사·공식몰 정식 명칭/설명 야채·곡물 음료에 식물성 단백질 / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
+C02156,dairy_drink,review,hold,discontinued_or_not_found,"제품 페이지 미확인 / 2026-11-17 재확인: 비락 공식 홈페이지 제품 목록에 하루우유 없음(PB 추정), 보류 유지",A,2026-11-16
+C02183,dairy_drink,review,hold,other,일동후디스의 딥초코 리뉴얼 제품 확인. 서로 다른 공장 행의 배합과 중복 여부 확인 필요,B,2026-11-17
+C02184,dairy_drink,review,hold,other,일동후디스의 딥초코 리뉴얼 제품 확인. 서로 다른 공장 행의 배합과 중복 여부 확인 필요,B,2026-11-17
 C02193,dairy_drink,review,hold,discontinued_or_not_found,"영양 앱만 검색, 포장·공식 페이지 확인 못함(제조사는 OEM) → 기준 ③에 따라 보류",A,2026-11-17
-C02251,yogurt,review,not_reviewed,not_reviewed,,,
-C02262,yogurt,review,not_reviewed,not_reviewed,,,
+C02251,yogurt,review,hold,other,국내 바이오 딸기 제품 자료만 확인. 후보의 영문 저지방 제품과 동일 여부 확인 필요,B,2026-11-17
+C02262,yogurt,review,hold,other,푸르밀 자체 딸기 제품 정보와 홈플러스 후보의 동일 여부 확인 필요,B,2026-11-17
 C02301,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함,A,2026-11-17
-C02354,yogurt,review,not_reviewed,not_reviewed,,,
-C02359,yogurt,review,hold,awaiting_second_review,"[포장] 롯데마트 제타 상품 이미지 컵 띠지 정면(YOZM, 플레인 그릭요거트 with 카카오 그래놀라, 중량·열량)에 단백질 강조 없음",A,2026-11-17
-C02365,yogurt,review,hold,awaiting_second_review,토핑(프로틴뮤즐리)에만 프로틴 표기. 요거트 본체·제품 전체 강조를 포장·공식 페이지에서 확인 못함(GS25 협업 단종 추정) → 기준 ③에 따라 보류,A,2026-11-17
-C02424,yogurt,review,not_reviewed,not_reviewed,,,
-C02438,yogurt,review,not_reviewed,not_reviewed,,,
-C02439,yogurt,review,hold,awaiting_second_review,공식 설명: 인절미 디저트 요거트,A,2026-11-15
-C02478,yogurt,review,not_reviewed,not_reviewed,,,
-C02493,yogurt,review,not_reviewed,not_reviewed,,,
-C02494,yogurt,review,hold,discontinued_or_not_found,"영양 앱만 검색, 포장·공식 페이지 확인 못함(제조사 OEM) → 기준 ③에 따라 보류",A,2026-11-17
+C02354,yogurt,review,hold,other,요즘 공식몰에서 허니큐브 조합 제품의 포장이나 공식 상세를 확인하지 못함,B,2026-11-17
+C02365,yogurt,review,hold,other,토핑(프로틴뮤즐리)에만 프로틴 표기. 요거트 본체·제품 전체 강조를 포장·공식 페이지에서 확인 못함(GS25 협업 단종 추정) → 기준 ③에 따라 보류,A,2026-11-17
+C02438,yogurt,review,hold,other,노브랜드 동일 맛 판매 상세. 포장 앞면이나 자체 브랜드 공식 설명 추가 확인 필요,B,2026-11-17
+C02493,yogurt,review,hold,other,다른 제조사의 꾸덕 그릭과 구별되는 맛누리 품목의 포장이나 공식 설명 필요,B,2026-11-17
+C02494,yogurt,review,hold,discontinued_or_not_found,"영양 앱만 검색, 포장·공식 페이지 확인 못함(제조사 OEM) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·편의점 검색에서 서울에프엔비 해당 제품 포장 없음, 보류 유지",A,2026-11-17
 C02511,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C02524,yogurt,review,not_reviewed,not_reviewed,,,
+C02524,yogurt,review,hold,other,꾸덕100 제품 정보는 확인. 일치하는 포장과 제조사 공식 상세를 확인하지 못함,B,2026-11-17
 C02531,yogurt,review,hold,discontinued_or_not_found,"수제 매장 제품, 포장 확인 불가",A,2026-11-16
-C02534,yogurt,review,not_reviewed,not_reviewed,,,
-C02537,yogurt,review,not_reviewed,not_reviewed,,,
-C02554,yogurt,review,not_reviewed,not_reviewed,,,
-C02555,yogurt,review,not_reviewed,not_reviewed,,,
+C02534,yogurt,review,hold,other,데일리앤그릭 황치즈 맛 자료와 공식 제품 설명 확인 필요,B,2026-11-17
+C02537,yogurt,review,hold,other,동원몰 공식 제품명에 토핑명이 포함됨. 요거트 본체나 전체 강조 확인 필요,B,2026-11-17
+C02554,yogurt,review,hold,other,품목 정보로 제조사 일치 확인. 상품 포장과 소비자용 제품명 확인 필요,B,2026-11-17
+C02555,yogurt,review,hold,other,남양유업 후보와 일치하는 소비자용 제품명·포장 확인 필요,B,2026-11-17
 C02597,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C02602,yogurt,review,not_reviewed,not_reviewed,,,
-C02605,yogurt,review,not_reviewed,not_reviewed,,,
+C02602,yogurt,review,hold,other,한진푸드 공식몰에 다른 그릭요거트는 있으나 마요트 시그니처와 일치하는 상세 미확인,B,2026-11-17
+C02605,yogurt,review,hold,other,맘맘 큐브 제품과 구별되는 그릭요거트 본품 확인 필요,B,2026-11-17
 C02619,yogurt,review,exclude,duplicate,C02618과 같은 제품(제품명 어순만 다름),A,2026-11-17
 C02620,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함 → 기준 ③에 따라 보류,A,2026-11-17
-C02641,yogurt,review,not_reviewed,not_reviewed,,,
-C02642,yogurt,review,not_reviewed,not_reviewed,,,
-C02656,yogurt,review,not_reviewed,not_reviewed,,,
-C02658,yogurt,review,not_reviewed,not_reviewed,,,
-C02659,yogurt,review,not_reviewed,not_reviewed,,,
+C02641,yogurt,review,exclude,out_of_scope_form,[포장] 무튼 제작사 캠페인 사진에서 짜먹는 마개형 파우치 제품 확인,B,2026-11-17
+C02642,yogurt,review,hold,other,무튼 플레인은 마개형 파우치로 확인. 블루베리 품목의 해당 포장 확인 필요,B,2026-11-17
+C02658,yogurt,review,hold,other,같은 라인의 딸기 제품 공식 상세를 찾음. 해당 맛의 포장 또는 공식 상세 확인 필요,B,2026-11-17
+C02659,yogurt,review,hold,other,같은 라인의 딸기 제품 공식 상세를 찾음. 해당 맛의 포장 또는 공식 상세 확인 필요,B,2026-11-17
 C02698,yogurt,review,exclude,duplicate,"[공식] 제조사·공식몰 정식 명칭/설명 C02697과 같은 제품, 공장만 다름",A,2026-11-16
-C02711,yogurt,review,not_reviewed,not_reviewed,,,
+C02711,yogurt,review,hold,other,바이오 백도 판매 상세 확인. 정확한 제품의 포장 또는 공식 설명 확인 필요,B,2026-11-17
 C02726,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함(배민 PB),A,2026-11-17
-C02733,yogurt,review,not_reviewed,not_reviewed,,,
-C02747,yogurt,review,not_reviewed,not_reviewed,,,
+C02733,yogurt,review,hold,other,보마르셰 그릭 유통 정보가 있으나 스노우 제품과 일치하는 포장 확인 필요,B,2026-11-17
+C02747,yogurt,review,hold,other,유통 상세에서 블루벨 파나 확인. 판매명 외에 포장 또는 공식 설명 확인 필요,B,2026-11-17
 C02756,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함(영양 앱만 검색) → 기준 ③에 따라 보류,A,2026-11-17
-C02759,yogurt,review,hold,awaiting_second_review,"공식 설명: 토핑 요거트, 단백질 강조 없음",A,2026-11-15
 C02791,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C02806,yogurt,review,hold,other,"[포장] 정면 큰 문구(더진한 Greek, 1A, 국산원유)에 단백질 강조 없으나 왼쪽 작은 문구 판독 불가 → 충분히 확인 못해 보류",A,2026-11-17
 C02823,yogurt,review,hold,discontinued_or_not_found,"수제 목장 제품, 포장·공식 페이지 확인 못함",A,2026-11-17
 C02824,yogurt,review,hold,discontinued_or_not_found,"수제 제품, 포장·공식 페이지 확인 못함",A,2026-11-17
 C02841,yogurt,review,exclude,out_of_scope_form,스메타나(사워크림),A,2026-11-16
-C02843,yogurt,review,not_reviewed,not_reviewed,,,
-C02844,yogurt,review,not_reviewed,not_reviewed,,,
-C02846,yogurt,review,not_reviewed,not_reviewed,,,
-C02850,yogurt,review,hold,awaiting_second_review,[포장] 다나와 상품 이미지의 포장 정면에 '고단백'·'45g',A,2026-11-17
+C02843,yogurt,review,hold,other,비슷한 스위트 제품의 공식 페이지 확인. 후보 제조사와 저당 제품 여부 대조 필요,B,2026-11-17
+C02844,yogurt,review,hold,other,비슷한 스위트 제품의 공식 페이지 확인. 후보 제조사와 저당 제품 여부 대조 필요,B,2026-11-17
+C02846,yogurt,review,hold,other,공식 메뉴는 무지방 그릭요거트 제품. 후보 오가닉 그릭요거트와 동일한 제품인지 확인되지 않음,B,2026-11-17
 C02860,yogurt,review,exclude,duplicate,"C02859와 같은 제품명, 생산 공장만 다름",A,2026-11-17
-C02877,yogurt,review,not_reviewed,not_reviewed,,,
-C02882,yogurt,review,not_reviewed,not_reviewed,,,
 C02885,yogurt,review,hold,unspecified,"블로그만 확인, 포장 이미지 확인 필요",A,2026-11-16
 C02887,yogurt,review,hold,unspecified,포장 이미지 확인 필요,A,2026-11-16
 C02888,yogurt,review,hold,unspecified,포장 이미지 확인 필요,A,2026-11-16
 C02895,yogurt,review,exclude,out_of_scope_form,액티비아 병(130ml 마시는 타입),A,2026-11-16
-C02905,yogurt,review,not_reviewed,not_reviewed,,,
-C02907,yogurt,review,not_reviewed,not_reviewed,,,
-C02909,yogurt,review,not_reviewed,not_reviewed,,,
-C02937,yogurt,review,not_reviewed,not_reviewed,,,
-C02966,yogurt,review,not_reviewed,not_reviewed,,,
+C02907,yogurt,review,hold,other,어니스트그릭 브랜드 사이트 확인. 해당 맛과 제조사 일치 여부 확인 필요,B,2026-11-17
+C02909,yogurt,review,hold,other,어니스트그릭 브랜드 사이트 확인. 해당 맛과 제조사 일치 여부 확인 필요,B,2026-11-17
+C02937,yogurt,review,hold,other,피스타치오·망고 파나 포장 앞면 및 제조사 공식 설명 확인 필요,B,2026-11-17
+C02966,yogurt,review,hold,other,오거트 매장 정보와 다른 맛은 확인. 치즈케익 맛 포장이나 제조사 상세 미확인,B,2026-11-17
 C02971,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C02977,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02978,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02979,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02980,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02981,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02982,yogurt,review,not_reviewed,not_reviewed,,,
-C02983,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C02984,yogurt,review,not_reviewed,not_reviewed,,,
-C02985,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류",A,2026-11-17
-C03030,yogurt,review,not_reviewed,not_reviewed,,,
-C03033,yogurt,review,not_reviewed,not_reviewed,,,
-C03088,yogurt,review,not_reviewed,not_reviewed,,,
-C03091,yogurt,review,not_reviewed,not_reviewed,,,
-C03093,yogurt,review,not_reviewed,not_reviewed,,,
-C03154,yogurt,review,not_reviewed,not_reviewed,,,
-C03155,yogurt,review,not_reviewed,not_reviewed,,,
-C03156,yogurt,review,not_reviewed,not_reviewed,,,
-C03177,yogurt,review,not_reviewed,not_reviewed,,,
+C02977,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02978,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02979,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02980,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02981,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02982,yogurt,review,hold,other,삼성웰스토리 제품의 전체 강조인지 토핑만의 강조인지 포장 확인 필요,B,2026-11-17
+C02983,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C02984,yogurt,review,hold,other,삼성웰스토리 제품의 전체 강조인지 토핑만의 강조인지 포장 확인 필요,B,2026-11-17
+C02985,yogurt,review,hold,other,"'프로틴'이 그래놀라 토핑을 가리킬 가능성(오늘의 요거트 + 프로틴 그래놀라), 포장·공식 페이지 확인 못함(영양 앱만) → 기준 ③에 따라 보류 / 2026-11-17 재확인: 다나와·필라이즈·푸드랩(원재료 농후발효유+곡류가공품)·편의점 검색에서도 포장 사진 없음, 보류 유지",A,2026-11-17
+C03030,yogurt,review,hold,other,요거브릭 그릭요거트 품목 DB는 확인. 일치하는 포장이나 공식 상세 미확인,B,2026-11-17
+C03088,yogurt,review,hold,other,요즘 공식몰에서 해당 스위트 제품의 정확한 상품 상세 또는 포장 확인 필요,B,2026-11-17
+C03093,yogurt,review,hold,other,편의점 상품 소개 확인. 패트와 매트 플레인 포장 또는 브랜드 설명 확인 필요,B,2026-11-17
+C03156,yogurt,review,hold,other,플레인 화이트 판매 상세 확인. 포장 앞면 또는 빙그레 공식 제품 설명 확인 필요,B,2026-11-17
+C03177,yogurt,review,hold,other,동일 제품 판매 상세 확인. 해당 포장 또는 공식 설명 추가 확인 필요,B,2026-11-17
 C03196,yogurt,review,exclude,out_of_scope_form,버터밀크(마시는·조리용),A,2026-11-16
-C03216,yogurt,review,not_reviewed,not_reviewed,,,
-C03229,yogurt,review,not_reviewed,not_reviewed,,,
+C03216,yogurt,review,hold,other,일출목장 제품의 공식 품목 상세 또는 포장 확인 필요,B,2026-11-17
+C03229,yogurt,review,hold,other,연세유업 공식 세브란스 A2 그릭의 고단백 표현은 확인. 후보 전용목장 A2 그릭과 동일 제품인지 확인 필요,B,2026-11-17
 C03230,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C03235,yogurt,review,not_reviewed,not_reviewed,,,
+C03235,yogurt,review,hold,other,후보 이름이 소비기한 문구라 실제 소매 제품명 확인 필요,B,2026-11-17
 C03285,yogurt,review,hold,other,제조사 목록에 Lactose-free 10%와 High Protein 라인이 따로 있어 어느 제품인지 특정 못함 → 보류,A,2026-11-17
-C03288,yogurt,review,not_reviewed,not_reviewed,,,
-C03349,yogurt,review,not_reviewed,not_reviewed,,,
-C03350,yogurt,review,not_reviewed,not_reviewed,,,
-C03351,yogurt,review,hold,awaiting_second_review,"마시는 발효유(윌) / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
-C03365,yogurt,review,not_reviewed,not_reviewed,,,
-C03367,yogurt,review,not_reviewed,not_reviewed,,,
-C03368,yogurt,review,not_reviewed,not_reviewed,,,
+C03288,yogurt,review,hold,other,트웬티의 제품 설명은 확인. 후보 트리니티 크리미와 동일 제품인지 확인 필요,B,2026-11-17
+C03349,yogurt,review,hold,other,국내 떠먹는 윌과 후보의 영문 프로바이오틱스 윌이 같은 제품인지 확인 필요,B,2026-11-17
+C03350,yogurt,review,hold,other,국내 떠먹는 윌과 후보의 영문 프로바이오틱스 윌이 같은 제품인지 확인 필요,B,2026-11-17
+C03351,yogurt,review,exclude,out_of_scope_form,"마시는 발효유(윌) / 제외 행이라 표시 칸은 비움(B와 맞춤, 2026-11-17)",A,2026-11-15
+C03365,yogurt,review,hold,other,플레인요거트가 일반 명칭이라 제조사를 기준으로 소매 브랜드와 포장 확인 필요,B,2026-11-17
+C03367,yogurt,review,hold,other,플레인요거트가 일반 명칭이라 제조사를 기준으로 소매 브랜드와 포장 확인 필요,B,2026-11-17
+C03368,yogurt,review,hold,other,플레인요거트가 일반 명칭이라 제조사를 기준으로 소매 브랜드와 포장 확인 필요,B,2026-11-17
 C03402,yogurt,review,hold,other,"토핑(프로틴 뮤즐리)에만 프로틴 표기, C02365와 같은 기준. 포장·공식 페이지 확인 못함",A,2026-11-17
 C03418,yogurt,review,exclude,out_of_scope_form,500ml 마시는 요구르트,A,2026-11-16
-C03422,yogurt,review,not_reviewed,not_reviewed,,,
-C03423,yogurt,review,not_reviewed,not_reviewed,,,
-C03431,yogurt,review,not_reviewed,not_reviewed,,,
+C03423,yogurt,review,hold,other,후디스 그릭 브랜드 페이지 확인. 딸기맛 제품의 포장 또는 설명 필요,B,2026-11-17
+C03431,yogurt,review,hold,other,푸르밀의 정확한 후레쉬 플레인 제품 포장이나 공식 설명 확인 필요,B,2026-11-17
