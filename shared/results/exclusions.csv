@@ -116,7 +116,6 @@ C02733,yogurt,review,hold,other,보마르셰 그릭 유통 정보가 있으나 �
 C02747,yogurt,review,hold,other,유통 상세에서 블루벨 파나 확인. 판매명 외에 포장 또는 공식 설명 확인 필요,B,2026-11-17
 C02756,yogurt,review,hold,discontinued_or_not_found,포장·공식 페이지 확인 못함(영양 앱만 검색) → 기준 ③에 따라 보류,A,2026-11-17
 C02791,yogurt,review,hold,discontinued_or_not_found,포장 확인 불가,A,2026-11-16
-C02806,yogurt,review,hold,other,"[포장] 정면 큰 문구(더진한 Greek, 1A, 국산원유)에 단백질 강조 없으나 왼쪽 작은 문구 판독 불가 → 충분히 확인 못해 보류",A,2026-11-17
 C02823,yogurt,review,hold,discontinued_or_not_found,"수제 목장 제품, 포장·공식 페이지 확인 못함",A,2026-11-17
 C02824,yogurt,review,hold,discontinued_or_not_found,"수제 제품, 포장·공식 페이지 확인 못함",A,2026-11-17
 C02841,yogurt,review,exclude,out_of_scope_form,스메타나(사워크림),A,2026-11-16
