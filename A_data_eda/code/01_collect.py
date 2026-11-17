@@ -40,7 +40,11 @@ YOGURT_DRINK = r"드링크|드링킹|마시는|drink|쿠르트|짜먹는|사워�
 GREEK = r"그릭|그리스|greek|아이슬란딕|스키르|skyr"
 
 DAIRY_REPS = {"우유", "우유(멸균)", "가공우유", "가공우유(멸균)", "강화우유", "유당분해우유", "유함유가공품"}
-LIQUID_EXCL = (r"두유|아몬드|오트|귀리|옥수수|식물성|비건|커피|라떼|콜드브루|탄산|스파클링|차$|티$|주스|에이드"
+CAFE_DRINK = (r"라[떼테]|래떼|밀크\s*(?:티|차)|커피|콜드\s*브루|카푸치노|에스프레소|아메리카노"
+              r"|마[키끼]아[토또]|마끼야또|흑당\s*티|버블\s*티"
+              r"|latte|milk[\s-]*tea|coffee|cold[\s-]*brew|cappuccino|espresso|americano|macchiato")
+CAFE_FLAVOR = r"(?:" + CAFE_DRINK + r")\s*(?:맛|향|flavou?r(?:ed)?\b)"
+LIQUID_EXCL = (r"두유|아몬드|오트|귀리|옥수수|식물성|비건|탄산|스파클링|차$|티$|주스|에이드"
                r"|워터|water|이온")
 DAIRY_ING = r"우유|원유|분유|유단백|카제인|유청|산양유|유크림|농축유|연유|우유단백"
 PLANT_ING = r"대두단백|분리대두|완두단백|쌀단백|두류가공품|아몬드|귀리|오트"
@@ -115,8 +119,14 @@ def select_groups(df, ingredients, flow):
     flow.append(("dairy_drink", "1_category", (dairy | liquid).sum()))
     keep_base = base.eq("100ml")
     flow.append(("dairy_drink", "2_basis_100ml", ((dairy | liquid) & keep_base).sum()))
-    d = df[dairy & keep_base].assign(ingredient_check="dairy_code", has_plant_protein="")
-    lq = df[liquid & keep_base].copy()
+    # 우유류와 액상음료에 같은 제외 기준을 적용한다.
+    # 단백질 음료에 맛·향으로만 명시된 표현은 음료 유형 판정에서 뺀다.
+    without_flavor = name.str.replace(CAFE_FLAVOR, "", case=False, regex=True)
+    drink_name = name.where(~has(name, PROTEIN_WORDS), without_flavor)
+    keep_form = ~has(drink_name, CAFE_DRINK)
+    flow.append(("dairy_drink", "2b_exclude_cafe_drinks", ((dairy | liquid) & keep_base & keep_form).sum()))
+    d = df[dairy & keep_base & keep_form].assign(ingredient_check="dairy_code", has_plant_protein="")
+    lq = df[liquid & keep_base & keep_form].copy()
     ing = lq["품목제조보고번호"].map(ingredients)
     lq["has_plant_protein"] = np.where(has(ing, PLANT_ING), "1", "0")
     matched_dairy = ing.notna() & has(ing, DAIRY_ING)
