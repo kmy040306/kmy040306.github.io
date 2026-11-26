@@ -190,7 +190,7 @@ def main():
     tests = pd.DataFrame(test_rows)
     bootstrap = pd.DataFrame(bootstrap_rows)
 
-    # 全 식품군 × 5개 지표를 하나의 묶음으로 Holm 보정한다.
+    # 전체 식품군 × 5개 지표를 하나의 묶음으로 Holm 보정한다.
     # 미실시 검정의 원 p값은 결측으로 두고 보정 계산에만 1을 쓴다.
     correction_input = tests["p_raw"].fillna(1.0).to_numpy()
     _, adjusted_p, _, _ = multipletests(
