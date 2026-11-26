@@ -118,9 +118,9 @@ C02843,yogurt,review,hold,other,비슷한 스위트 제품의 공식 페이지 �
 C02844,yogurt,review,hold,other,비슷한 스위트 제품의 공식 페이지 확인. 후보 제조사와 저당 제품 여부 대조 필요,B,2026-11-17
 C02846,yogurt,review,hold,other,공식 메뉴는 무지방 그릭요거트 제품. 후보 오가닉 그릭요거트와 동일한 제품인지 확인되지 않음,B,2026-11-17
 C02860,yogurt,review,exclude,duplicate,"C02859와 같은 제품명, 생산 공장만 다름",A,2026-11-17
-C02885,yogurt,review,hold,unspecified,"블로그만 확인, 포장 이미지 확인 필요",A,2026-11-16
-C02887,yogurt,review,hold,unspecified,포장 이미지 확인 필요,A,2026-11-16
-C02888,yogurt,review,hold,unspecified,포장 이미지 확인 필요,A,2026-11-16
+C02885,yogurt,review,hold,discontinued_or_not_found,"블로그만 확인, 포장 이미지 확인 필요",A,2026-11-16
+C02887,yogurt,review,hold,discontinued_or_not_found,포장 이미지 확인 필요,A,2026-11-16
+C02888,yogurt,review,hold,discontinued_or_not_found,포장 이미지 확인 필요,A,2026-11-16
 C02895,yogurt,review,exclude,out_of_scope_form,액티비아 병(130ml 마시는 타입),A,2026-11-16
 C02907,yogurt,review,hold,other,어니스트그릭 브랜드 사이트 확인. 해당 맛과 제조사 일치 여부 확인 필요,B,2026-11-17
 C02909,yogurt,review,hold,other,어니스트그릭 브랜드 사이트 확인. 해당 맛과 제조사 일치 여부 확인 필요,B,2026-11-17

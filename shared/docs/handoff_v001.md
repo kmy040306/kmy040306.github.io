@@ -43,16 +43,18 @@ A·B 판정을 통합해 확정한 첫 분석용 데이터. 통계·ML은 이 �
 | 파일 | 행 | SHA-256 |
 |---|---|---|
 | `shared/data/raw/candidates.csv` | 3,431 | `613d4c319d0d2cfa6f93f3034d4c89694c19ee31333dde4e839f4196625dd49d` |
-| `shared/data/raw/review_A.csv` | 146 | `377d91f074627bc6b5a057059a276f8d38c7ab976f122f7e56660fb24ef25313` |
+| `shared/data/raw/review_A.csv` | 146 | `e2f1b56192b11fd5c2d890b451a37943a60d2fde3474874cf2c6d23347ed2c07` |
 | `shared/data/raw/review_B.csv` | 144 | `2a0fdc914653a4444c48319f8d62659ea67b31e340398227659180e5778d2d91` |
 | `shared/docs/series_id_map.csv` | 4 | `9d464acea308c8e44746b4173ee699fa5684e0b04a9772c8258c43fc378bef3b` |
 | `shared/data/processed/products.csv` | 118 | `c1daf2db79c6218b7b8fbf91a006734e376261a321454a9195fc0cfd64f47dff` |
 | `shared/data/processed/series_statistics.csv` | 92 | `4674d1a5ac6bd2a38cf1ffd5cce398674b42f58c58b46de089fb5e020790b0d9` |
 | `shared/data/processed/series_ml.csv` | 92 | `c10226888e5976798e560533fa8278e933d46a0bde4cfed1c1a8fda783b2b4eb` |
 
+`review_A.csv`는 2026-11-26 보류 3행의 사유 코드만 채워 해시가 바뀌었다(분석 데이터 변화 없음).
+
 확인: `git show HEAD:<파일> | sha256sum` (Windows 작업 사본은 줄바꿈 변환 때문에 값이 다를 수 있음)
 
-원본 공공데이터 해시는 `shared/data/raw/README.md` 참고.
+원본 공공데이터 3개 파일의 SHA-256은 `shared/docs/sources.csv`의 비고 칸에 있다.
 
 ## 재현
 

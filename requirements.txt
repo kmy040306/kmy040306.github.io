@@ -1,10 +1,14 @@
-pandas
-numpy
-scipy
-statsmodels
-scikit-learn
-matplotlib
-seaborn
+# v001 결과를 만든 환경: Python 3.14.7, pandas 3.1.1, NumPy 2.5.5, SciPy 1.18.1,
+# statsmodels 0.15.0, scikit-learn 1.9.1, Matplotlib 3.11.2 (B_statistics_ml/explanations/results_v001.md)
+# 아래 하한 버전(Python 3.11)에서도 튜토리얼 노트북이 같은 결과를 재현함을 확인했다(2026-11-17).
+pandas>=2.1
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+scikit-learn>=1.5
+matplotlib>=3.8
+# 튜토리얼 실행·HTML 내보내기
 jupyter
-nbconvert
-nbformat
+nbconvert>=7
+nbformat>=5
+ipykernel

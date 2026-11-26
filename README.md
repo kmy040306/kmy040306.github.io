@@ -39,6 +39,15 @@
 | [shared/docs](shared/docs/) | 제품 선정 규칙과 데이터 사전 |
 | [final/tutorial.ipynb](final/tutorial.ipynb) | 분석 과정과 결과를 정리하는 노트북 |
 
+### 다시 실행하기
+
+```bash
+pip install -r requirements.txt
+```
+
+- **튜토리얼과 통계·머신러닝**은 저장소에 있는 가공 데이터(`shared/data/processed`)만으로 실행됩니다. `final/tutorial.ipynb`를 열어 모두 실행하거나, `B_statistics_ml/code`의 `00`→`03`을 차례로 실행합니다.
+- **후보 수집과 정제**(`A_data_eda/code`의 `01_collect.py`, `02_clean.py`)에는 원자료가 필요합니다. 원자료는 용량(약 135MB) 때문에 저장소에 올리지 않았습니다. [`shared/docs/sources.csv`](shared/docs/sources.csv)의 출처에서 받아 `shared/data/raw/`에 같은 파일명으로 두고, 같은 파일인지 SHA-256으로 확인한 뒤 실행합니다. 확정 데이터의 파일 목록과 해시는 [`handoff_v001.md`](shared/docs/handoff_v001.md)에 있습니다.
+
 ## 분석 결과
 
 확정 데이터 `v001`에서 제품 118개를 92개 시리즈로 묶어 분석했습니다. Holm 보정 후 바와 유제품 음료의 단백질 강조 집단은 일반 집단보다 평균 효율이 높았습니다(각각 100kcal당 +3.56g, +8.39g). 요거트는 일반 24개·강조 10개 시리즈를 비교했으며, 평균 효율 차이는 불확실했습니다.
